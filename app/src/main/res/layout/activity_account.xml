@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/accountActivity"
+    tools:context=".Account"
+    android:background="?attr/colorOnSecondary">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_details"
+        android:layout_marginTop="-50dp"
+        android:background="?attr/colorSecondaryVariant">
+
+        <View
+            android:id="@+id/vertikalni"
+            android:layout_width="1dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_centerHorizontal="true"
+            android:background="?attr/colorPrimaryVariant" />
+
+        <TextView
+            android:id="@+id/prosecna_occena"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/vertikalni"
+            android:layout_toStartOf="@id/vertikalni"
+            android:text="Prosečna ocena"
+            android:textSize="15dp" />
+
+        <RatingBar
+            android:id="@+id/averageRatubgBar"
+            style="?attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/vertikalni"
+            android:layout_toStartOf="@id/ocena" />
+
+        <TextView
+            android:id="@+id/ocena"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/prosecna_occena"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="-3dp"
+            android:layout_toStartOf="@id/vertikalni"
+            android:text=""
+            android:textStyle="bold"
+            android:textSize="23dp" />
+
+        <TextView
+            android:id="@+id/ukupanBrojOcena"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ukupan_broj"
+            android:layout_toEndOf="@id/vertikalni"
+            android:layout_marginBottom="-3dp"
+            android:text=""
+            android:textSize="23dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ukupan_broj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/prosecna_occena"
+            android:layout_toEndOf="@id/vertikalni"
+            android:textSize="15dp"
+            android:text="Ukupan broj ocena" />
+
+        <View
+            android:id="@+id/horiz1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/vertikalni"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="-5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="?attr/colorPrimary" />
+
+        <TextView
+            android:id="@+id/oglasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/vertikalni"
+            android:layout_margin="10dp"
+            android:textSize="15dp"
+            android:text="Svi oglasi korisnika" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/oglasi" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/user_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg"
+        android:padding="20dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/default_image" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/profile_image"
+            android:layout_toEndOf="@id/profile_image"
+            android:layout_marginStart="15dp"
+            android:layout_alignParentEnd="true"
+            android:gravity="right"
+            android:text=""
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/ime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/username"
+            android:layout_toEndOf="@id/profile_image"
+            android:layout_marginStart="15dp"
+            android:layout_alignEnd="@id/username"
+            android:gravity="right"
+            android:text=""
+            android:textSize="23dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/prezime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ime"
+            android:layout_alignEnd="@id/username"
+            android:layout_toEndOf="@id/profile_image"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="-7dp"
+            android:gravity="right"
+            android:text=""
+            android:textSize="23dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/godine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/prezime"
+            android:layout_alignEnd="@id/prezime"
+            android:text=""
+            android:textSize="23dp" />
+
+        <TextView
+            android:id="@+id/kratakOpis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/godine"
+            android:layout_alignStart="@id/profile_image"
+            android:textSize="15dp"
+            android:text="" />
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/nemaInternet"
+        layout="@layout/nema_internet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</RelativeLayout>

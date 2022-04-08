@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.TourMe" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#52e081</item>
+        <item name="colorPrimaryVariant">#363636</item>
+        <item name="colorOnPrimary">#b8e0c5</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#52e081</item>
+        <item name="colorSecondaryVariant">#121212</item>
+        <item name="colorOnSecondary">#252525</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorSecondaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">#cccccc</item>
+        <item name="colorOnBackground">#CDCDCD</item>
+    </style>
+
+    <style name="ThemeOverlay.AppCompat.navTheme">
+        <!-- Color when SELECTED in DRAWER -->
+        <item name="colorPrimary">#f2f2f2</item>
+        <item name="colorSurface">#52e081</item>
+        <item name="android:textColor">#cccccc</item>
+    </style>
+
+</resources>

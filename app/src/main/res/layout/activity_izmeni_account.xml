@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/izmeniAccountActivity"
+    tools:context=".IzmeniAccountActivity"
+    android:background="?attr/colorSecondaryVariant">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:text="Podešavanje profila"
+                android:textSize="23dp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/podesi_sliku"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="40dp"
+                android:padding="10dp"
+                android:layout_below="@id/login"
+                android:layout_alignStart="@id/podesi_ime"
+                android:layout_alignEnd="@id/podesi_ime">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profilna"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/default_image" />
+
+                <Button
+                    android:id="@+id/izmeni"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@id/profilna"
+                    android:layout_marginStart="20dp"
+                    android:text="Izaberite drugu"
+                    android:textSize="14dp"
+                    android:textColor="?attr/colorPrimary"
+                    app:strokeColor="?attr/colorPrimary" />
+
+                <Button
+                    android:id="@+id/izbrisi"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/izmeni"
+                    android:layout_alignStart="@id/izmeni"
+                    android:layout_alignParentEnd="true"
+                    android:text="Izbrišite"
+                    android:textSize="14dp"
+                    android:textColor="@color/red"
+                    app:strokeColor="@color/red" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/podesi_datum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_form"
+                android:layout_marginBottom="10dp"
+                android:padding="10dp"
+                android:layout_below="@id/podesi_sliku"
+                android:layout_alignStart="@id/podesi_ime"
+                android:layout_alignEnd="@id/podesi_ime">
+
+                <TextView
+                    android:id="@+id/datumtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:text="Datum rođenja"
+                    android:layout_marginBottom="10dp"/>
+
+                <Spinner
+                    android:id="@+id/dan"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/datumtext" />
+
+                <Spinner
+                    android:id="@+id/mesec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/datumtext"
+                    android:layout_toStartOf="@id/godina"
+                    android:layout_toEndOf="@id/dan" />
+
+                <Spinner
+                    android:id="@+id/godina"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/datumtext"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/podesi_ime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_form"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:layout_below="@id/podesi_datum"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:id="@+id/imetext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:text="Ime"/>
+
+                <EditText
+                    android:id="@+id/ime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imetext"
+                    android:maxLength="15"
+                    android:textSize="15dp"
+                    android:backgroundTint="#00000000"
+                    android:inputType="textPersonName" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/podesi_prezime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_form"
+                android:layout_marginBottom="10dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:layout_below="@id/podesi_ime"
+                android:layout_alignStart="@id/podesi_ime"
+                android:layout_alignEnd="@id/podesi_ime">
+
+                <TextView
+                    android:id="@+id/prezimetext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:text="Prezime"/>
+
+                <EditText
+                    android:id="@+id/prezime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/prezimetext"
+                    android:maxLength="20"
+                    android:textSize="15dp"
+                    android:backgroundTint="#00000000"
+                    android:inputType="textPersonName" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/podesi_opis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_form"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:layout_below="@id/podesi_prezime"
+                android:layout_alignStart="@id/podesi_ime"
+                android:layout_alignEnd="@id/podesi_ime">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Opis"
+                    android:textSize="15dp"
+                    android:id="@+id/opistext"/>
+
+                <EditText
+                    android:id="@+id/opis"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_below="@id/opistext"
+                    android:backgroundTint="#00000000"
+                    android:gravity="bottom"
+                    android:textSize="15dp"
+                    android:inputType="text|textMultiLine|textCapSentences"
+                    android:maxLength="150" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/sacuvaj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/podesi_opis"
+                android:layout_alignStart="@id/podesi_opis"
+                android:layout_alignEnd="@id/podesi_opis"
+                android:layout_marginTop="30dp"
+                android:text="Sačuvajte izmene"
+                android:textSize="14dp"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/odustani"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sacuvaj"
+                android:layout_alignStart="@id/sacuvaj"
+                android:layout_alignEnd="@id/sacuvaj"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:text="Odustanite"
+                android:textSize="14dp"
+                android:textColor="@color/red"
+                app:strokeColor="@color/red" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <include
+        layout="@layout/nema_internet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/nemaInternet"
+        android:visibility="gone"/>
+
+</RelativeLayout>

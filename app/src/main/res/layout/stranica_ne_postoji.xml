@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/stranica_ne_postoji"
+    android:background="?attr/colorSecondaryVariant">
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_no_page"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/ico_ns"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stranica ne postoji."
+        android:textSize="18dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ico_ns"
+        android:id="@+id/text"/>
+
+    <Button
+        android:id="@+id/backButttonNoPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="?attr/colorPrimary"
+        android:text="Nazad"
+        android:textSize="14dp"
+        android:textColor="@color/white"
+        android:visibility="visible"/>
+
+
+</RelativeLayout>
+

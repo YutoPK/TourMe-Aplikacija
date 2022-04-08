@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "142176528434",
+    "firebase_url": "https://tourme-6de2d-default-rtdb.firebaseio.com",
+    "project_id": "tourme-6de2d",
+    "storage_bucket": "tourme-6de2d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:142176528434:android:7ff2e9457f780706a0b42b",
+        "android_client_info": {
+          "package_name": "com.example.tourme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "142176528434-v910r7nd2a6qmnkkvneeebl6jmp5f5vq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlaRSyxkFV3FIa3MY3sHhENjvwiKnFqKE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "142176528434-v910r7nd2a6qmnkkvneeebl6jmp5f5vq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/nema_internet"
+    android:background="?attr/colorSecondaryVariant">
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_no_net"
+        android:id="@+id/ico_ni"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Nešto nije u redu."
+        android:layout_below="@id/ico_ni"
+        android:layout_centerHorizontal="true"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:id="@+id/problem"/>
+
+    <Button
+        android:id="@+id/TryAgainButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/problem"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="?attr/colorPrimary"
+        android:text="Pokušajte ponovo"
+        android:textSize="14dp"
+        android:textColor="@color/white"
+        android:visibility="visible"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/problem"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
+        android:indeterminateTint="?attr/colorPrimary"
+        android:visibility="gone" />
+
+</RelativeLayout>

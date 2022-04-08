@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/pocetniFragment"
+    tools:context=".Fragments.Pocetni">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <AutoCompleteTextView
+            android:id="@+id/searchBar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="10dp"
+            android:layout_toStartOf="@id/searchButton"
+            android:background="@drawable/bg"
+            android:completionThreshold="1"
+            android:hint="Odaberite grad"
+            android:textSize="15dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp" />
+
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="40dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="?attr/colorOnSecondary"
+            android:drawableBottom="@drawable/ic_search" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/searchBar"
+            android:layout_alignBaseline="@id/sortType"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="13dp"
+            android:textSize="15dp"
+            android:text="Sortirajte po" />
+
+        <Spinner
+            android:id="@+id/sortType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/searchBar"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/textView2" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/sortType"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/loadingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="?attr/colorPrimary"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/nema_oglasa"
+        layout="@layout/nema_oglas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/nemaInternet"
+        layout="@layout/nema_internet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Podešavanja"
+            android:textSize="23dp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/nalog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="Nalog"
+            android:layout_below="@id/textView7"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp"/>
+
+        <Button
+            android:id="@+id/izmeniNalog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="?attr/materialButtonOutlinedStyle"
+            android:textColor="?attr/colorPrimary"
+            app:strokeColor="?attr/colorPrimary"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="14dp"
+            android:text="Izmenite nalog"
+            android:layout_below="@id/nalog"/>
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?attr/colorPrimaryVariant"
+            android:layout_below="@id/izmeniNalog"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:id="@+id/app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="Aplikacija"
+            android:layout_marginStart="20dp"
+            android:layout_below="@id/separator"/>
+
+        <Switch
+            android:id="@+id/switchObavestenja"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/app"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Obaveštenja"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <TextView
+            android:id="@+id/usloviButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/switchObavestenja"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#0B0080"
+            android:text="Politika privatnosti. Pravila i uslovi korišćenja."
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

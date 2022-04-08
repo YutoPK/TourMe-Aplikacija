@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/messageActivity"
+    tools:context=".MessageActivity"
+    android:background="?attr/colorSecondaryVariant">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorOnSecondary">
+
+        <Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_back"
+                android:layout_marginEnd="15dp"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/default_image" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/username"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="15dp"
+                android:textSize="20dp"
+                android:focusable="true"
+                android:clickable="true"/>
+
+        </Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="3dp"
+        android:layout_above="@id/bottom"
+        android:layout_below="@id/bar_layout" />
+
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="5dp"
+        android:background="?attr/colorSecondaryVariant">
+
+        <EditText
+            android:id="@+id/text_send"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/button_send"
+            android:maxLength="250"
+            android:background="@drawable/bg"
+            android:hint="Unesite poruku..."
+            android:textSize="15dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp" />
+
+        <ImageButton
+            android:id="@+id/button_send"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/ic_send" />
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/nemaInternet"
+        layout="@layout/nema_internet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <include
+        layout="@layout/not_logged_in"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/nijePrijavljen"
+        android:visibility="gone"/>
+
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/pocetni">
+    <fragment
+        android:id="@+id/pocetni"
+        android:name="com.example.tourme.Fragments.Pocetni"
+        android:label="fragment_pocetni"
+        tools:layout="@layout/fragment_pocetni" />
+    <fragment
+        android:id="@+id/poruke"
+        android:name="com.example.tourme.Fragments.Poruke"
+        android:label="fragment_poruke"
+        tools:layout="@layout/fragment_poruke" />
+    <fragment
+        android:id="@+id/obavestenja"
+        android:name="com.example.tourme.Fragments.Obavestenja"
+        android:label="fragment_obavestenja"
+        tools:layout="@layout/fragment_obavestenja" />
+</navigation>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:paddingTop="10dp"
+    android:background="?attr/colorSecondaryVariant">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?attr/colorPrimaryVariant"
+        android:layout_below="@id/deskripcija"
+        android:layout_marginTop="15dp"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/comment_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/default_image" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/comment_image"
+        android:layout_toStartOf="@id/ratingStars"
+        android:layout_marginEnd="10dp"
+        android:layout_toEndOf="@id/comment_image"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:text=""
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ime_prezime"
+        android:text=""
+        android:layout_alignTop="@id/comment_image"
+        android:layout_toEndOf="@id/comment_image"
+        android:layout_marginStart="10dp"
+        android:layout_toStartOf="@id/ratingStars"
+        android:layout_marginEnd="10dp"
+        android:textSize="15dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/deskripcija"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="15dp"
+        android:layout_alignStart="@id/ime_prezime"
+        android:layout_below="@id/ime_prezime"/>
+
+    <RatingBar
+        android:id="@+id/ratingStars"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@id/ime_prezime"
+        android:numStars="5"
+        android:rating="0"/>
+
+</RelativeLayout>
